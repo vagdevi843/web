@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banking Dashboard</title>
+  <style>
+    :root {
+      --primary-color: #0d6efd;
+      --light-bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #212529;
+      --muted-color: #6c757d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      padding: 1.5rem;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .balance {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .transactions ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .transactions li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      color: var(--muted-color);
+    }
+
+    .transactions li:last-child {
+      border-bottom: none;
+    }
+
+    .card-details p {
+      margin: 0.5rem 0;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .balance {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MyBank Dashboard</h1>
+    <p>Welcome, Vagdevi</p>
+  </header>
+
+  <section class="dashboard">
+    <!-- Account Balance Card -->
+    <div class="card">
+      <h3>Account Balance</h3>
+      <p class="balance">$12,450.75</p>
+      <p class="muted">As of Aug 1, 2025</p>
+    </div>
+
+    <!-- Recent Transactions Card -->
+    <div class="card transactions">
+      <h3>Recent Transactions</h3>
+      <ul>
+        <li>+ ₹5,000.00 - Salary</li>
+        <li>- ₹1,200.00 - Rent</li>
+        <li>- ₹500.00 - Grocery</li>
+        <li>+ ₹250.00 - Cashback</li>
+      </ul>
+    </div>
+
+    <!-- Card Info -->
+    <div class="card card-details">
+      <h3>Card Details</h3>
+      <p><strong>Card Number:</strong> **** **** **** 3456</p>
+      <p><strong>Expiry:</strong> 11/28</p>
+      <p><strong>Status:</strong> Active</p>
+    </div>
+  </section>
+
+</body>
+</html>
